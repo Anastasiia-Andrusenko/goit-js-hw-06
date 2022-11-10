@@ -16,11 +16,11 @@ const refs = {
 
 // callback функція для створення розмітки
 const createBoxes = (amount) => {
+  destroyBoxes();
   const markup = [];
   for (let i = 0; i < amount; i += 1) {
     let size = 30 + i * 10;
     const box = `<div style="background-color: ${getRandomHexColor()}; width: ${size}px; height: ${size}px;"></div>`;
-    // refs.boxes.insertAdjacentHTML('afterbegin', box);
     markup.push(box);
   }
   // console.log(markup);
